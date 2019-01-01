@@ -1,0 +1,25 @@
+[
+  {
+    "model": "tenchanapi.location",
+    "pk": 1,
+    "fields": {
+      "timestamp": 0,
+      "idol_id": 0,
+      "latitude": 35.6895924,
+      "longitude": 139.7004131,
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  },
+    {
+    "model": "tenchanapi.idol",
+    "pk": 1,
+    "fields": {
+      "idol_id": 0,
+      "name": "test_idol",
+      "idolgroup_id": 0,
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  }
+]
