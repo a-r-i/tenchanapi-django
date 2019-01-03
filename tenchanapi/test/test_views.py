@@ -1,32 +1,31 @@
 import base64
 
 from django.contrib.auth.models import User
-
 from rest_framework.test import APITestCase, APIClient
 
-class SearchLocations(APITestCase):
+class TestSearchLocations(APITestCase):
     fixtures = ['test_views.json']
 
-    def test_post(self):
-        username = ''
-        password = ''
-        username_password = '%s:%s' % (username, password)
+    def setUp(self):
+        self.username = ''
+        self.password = ''
 
-        c = APIClient(HTTP_USER_AGENT='test_agent')
-        c.user = User(username=username)
-        c.user.set_password(password)
-        c.user.save()
-
-        auth_headers = {
-            'HTTP_AUTHORIZATION': 'Basic ' + base64.b64encode(username_password.encode()).decode(),
-        }
+        self.c = APIClient(HTTP_USER_AGENT='test_agent')
+        self.c.user = User(username=self.username)
+        self.c.user.set_password(self.password)
+        self.c.user.save()
 
         # 新宿駅の緯度と経度
-        data = {
+        self.data = {
             'latitude': 35.6895924,
             'longitude': 139.7004131
         }
 
-        response = c.post('/locations/search', data, **auth_headers)
-        print(response.content)
+    def test_post(self):
+        username_password = '%s:%s' % (self.username, self.password)
+        auth_headers = {
+            'HTTP_AUTHORIZATION': 'Basic ' + base64.b64encode(username_password.encode()).decode(),
+        }
+
+        response = self.c.post('/locations/search', self.data, **auth_headers)
         self.assertEqual(response.status_code, 200)
