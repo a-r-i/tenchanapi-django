@@ -11,13 +11,94 @@
       "updated_at": "2018-12-10 09:18:30.845202"
     }
   },
-    {
+  {
     "model": "tenchanapi.idol",
     "pk": 1,
     "fields": {
       "idol_id": 0,
       "name": "test_idol",
       "idolgroup_id": 0,
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  },
+  {
+    "model": "tenchanapi.light",
+    "pk": 1,
+    "fields": {
+      "timestamp": 0,
+      "member": 0,
+      "device": "test_device",
+      "sensor": "test_sensor",
+      "light": 0,
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  },
+  {
+    "model": "tenchanapi.body",
+    "pk": 1,
+    "fields": {
+      "timestamp": 0,
+      "member": 0,
+      "muscle_mass": 0,
+      "hydration": 0,
+      "bone_mass": 0,
+      "device": "test_device",
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  },
+  {
+    "model": "tenchanapi.sleepsummary",
+    "pk": 1,
+    "fields": {
+      "member": 0,
+      "startdate": 0,
+      "enddate": 0,
+      "wakeupduration": 0,
+      "lightsleepduration": 0,
+      "deepsleepduration": 0,
+      "remsleepduration": 0,
+      "durationtosleep": 0,
+      "durationtowakeup": 0,
+      "wakeupcount": 0,
+      "device": "test_device",
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  }, {
+    "model": "tenchanapi.sleep",
+    "pk": 1,
+    "fields": {
+      "member": 0,
+      "sleep_level": 0,
+      "startdate": 0,
+      "enddate": 0,
+      "device": "test_device",
+      "registered_at": 0,
+      "timestamp": "0",
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  }, {
+    "model": "tenchanapi.nokiahealthapitoken",
+    "pk": 1,
+    "fields": {
+      "member": 0,
+      "access_token": "0",
+      "refresh_token": "0",
+      "created_at": "2018-12-10 09:18:30.845202",
+      "updated_at": "2018-12-10 09:18:30.845202"
+    }
+  }, {
+    "model": "tenchanapi.heartrate",
+    "pk": 1,
+    "fields": {
+      "timestamp": 1,
+      "member": 1,
+      "bpm": 1,
+      "device": "test_device",
       "created_at": "2018-12-10 09:18:30.845202",
       "updated_at": "2018-12-10 09:18:30.845202"
     }
