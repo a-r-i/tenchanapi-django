@@ -20,6 +20,6 @@ from tenchanapi.urls import router as tenchanapi_router
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^locations/search', views.SearchLocations.as_view()),
+    url(r'^locations/search', views.SearchLocationsView.as_view()),
     url(r'', include(tenchanapi_router.urls)),
 ]
